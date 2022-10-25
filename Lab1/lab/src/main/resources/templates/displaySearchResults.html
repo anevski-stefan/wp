@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Balloon Order page - Search query results</title>
+</head>
+<body>
+<h1>Search query results</h1>
+<main>
+    <h2>Search query results:</h2>
+    <ul>
+        <li th:each="balloon : ${foundBalloons}">
+            <th:block th:text="${balloon.name}"/>
+            <th:block th:text="${balloon.description}"/>
+
+        </li>
+    </ul>
+
+    <a href="/">Back</a>
+</main>
+</body>
+</html>
